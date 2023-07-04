@@ -10,7 +10,7 @@ export interface VoteButtonProps {
 export default function VoteButton(props: VoteButtonProps) {
   const isVoted = useSignal(props.isVoted);
   const score = useSignal(props.item.score);
-
+  const id = 1;
   async function onClick(event: MouseEvent) {
     if (event.detail === 1) {
       const url = `/api/vote?item_id=${props.item.id}`;
